@@ -23,4 +23,29 @@ target_link_libraries(coursework1.2.0
     sfml-system
 )
 
-# (Блок копирования удалён – DLL скопируем вручную)
+set(ASSETS_DIR "${CMAKE_CURRENT_SOURCE_DIR}/111")
+
+if(EXISTS "${ASSETS_DIR}")
+    # Копируем шрифт (если есть)
+    if(EXISTS "${ASSETS_DIR}/arial.ttf")
+        add_custom_command(TARGET coursework1.2.0 POST_BUILD
+            COMMAND ${CMAKE_COMMAND} -E copy_if_different
+                "${ASSETS_DIR}/arial.ttf"
+                $<TARGET_FILE_DIR:coursework1.2.0>
+            COMMENT "Копирование шрифта из папки 111"
+        )
+    endif()
+
+    # Копируем все DLL из папки 111
+    file(GLOB DLL_FILES "${ASSETS_DIR}/*.dll")
+    foreach(DLL ${DLL_FILES})
+        add_custom_command(TARGET coursework1.2.0 POST_BUILD
+            COMMAND ${CMAKE_COMMAND} -E copy_if_different
+                "${DLL}"
+                $<TARGET_FILE_DIR:coursework1.2.0>
+            COMMENT "Копирование ${DLL}"
+        )
+    endforeach()
+else()
+    message(WARNING "Папка 111 не найдена, копирование файлов пропущено")
+endif()

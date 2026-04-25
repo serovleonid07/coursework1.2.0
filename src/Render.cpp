@@ -4,47 +4,61 @@
 #include <iostream>
 
 Render::Render() : currentState(GameState::MENU), victorySaved(false) {
-    window.create(sf::VideoMode({450, 600}), "15 Puzzle - Coursework");
+    // Окно 1920x1080 без полноэкранного стиля
+    window.create(sf::VideoMode({1920, 1080}), "Game application 'Tag'");
     window.setFramerateLimit(60);
-    font.openFromFile("C:/Windows/Fonts/arial.ttf");
+    
+    if (!font.openFromFile("arial.ttf")) {
+        font.openFromFile("C:/Windows/Fonts/arial.ttf");
+    }
 }
 
 void Render::drawBoard(const GameLogic& game) {
     window.clear(sf::Color(45, 45, 48));
 
-    float currentTileSize = 450.0f / game.getSize();
+    sf::Vector2u windowSize = window.getSize();
+    float boardSizePx = std::min(windowSize.x, windowSize.y - 100); // место под текст
+    float cellSize = boardSizePx / game.getSize();
+    float offsetX = (windowSize.x - boardSizePx) / 2.0f;
+    float offsetY = (windowSize.y - boardSizePx - 100) / 2.0f;
 
     for (int i = 0; i < game.getSize() * game.getSize(); ++i) {
         int val = game.getTile(i);
         if (val == 0) continue;
 
-        sf::RectangleShape tile({currentTileSize - margin, currentTileSize - margin});
-        float posX = static_cast<float>(i % game.getSize()) * currentTileSize + margin / 2.0f;
-        float posY = static_cast<float>(i / game.getSize()) * currentTileSize + margin / 2.0f;
-        tile.setPosition({posX, posY});
+        int row = i / game.getSize();
+        int col = i % game.getSize();
+        float posX = offsetX + col * cellSize;
+        float posY = offsetY + row * cellSize;
+
+        sf::RectangleShape tile(sf::Vector2f(cellSize - margin, cellSize - margin));
+        tile.setPosition({posX + margin/2.0f, posY + margin/2.0f});
         tile.setFillColor(sf::Color(0, 122, 204));
 
-        int fontSize = (game.getSize() >= 5) ? 24 : 36;
+        int fontSize = static_cast<int>(cellSize * 0.35f);
+        if (fontSize < 16) fontSize = 16;
         sf::Text text(font, std::to_string(val), fontSize);
         text.setFillColor(sf::Color::White);
         sf::FloatRect textRect = text.getLocalBounds();
         text.setOrigin({textRect.position.x + textRect.size.x / 2.0f,
                         textRect.position.y + textRect.size.y / 2.0f});
-        text.setPosition({posX + (currentTileSize - margin) / 2.0f,
-                          posY + (currentTileSize - margin) / 2.0f});
-
+        text.setPosition({posX + cellSize / 2.0f,
+                          posY + cellSize / 2.0f});
         window.draw(tile);
         window.draw(text);
     }
 
-    sf::Text info(font, "Moves: " + std::to_string(game.getMoves()) + "   [ESC] - Level Select", 20);
-    info.setPosition({20.0f, 500.0f});
+    // Информационная панель
+    sf::Text info(font, "Moves: " + std::to_string(game.getMoves()) + "   [ESC] - Level Select", 24);
+    info.setPosition({20.0f, static_cast<float>(windowSize.y) - 50.0f});
     window.draw(info);
 
     if (game.isSolved() && game.getMoves() > 0) {
-        sf::Text win(font, "YOU WIN!", 50);
+        sf::Text win(font, "YOU WIN!", 70);
         win.setFillColor(sf::Color::Green);
-        win.setPosition({110.0f, 220.0f});
+        sf::FloatRect winRect = win.getLocalBounds();
+        win.setPosition({(windowSize.x - winRect.size.x) / 2.0f,
+                         (windowSize.y - winRect.size.y) / 2.0f});
         window.draw(win);
 
         if (!victorySaved) {
@@ -58,29 +72,33 @@ void Render::drawBoard(const GameLogic& game) {
 
 void Render::showHistory() {
     auto records = History::loadRecords();
-    sf::Text title(font, "GAME HISTORY (latest first)", 26);
+    sf::Vector2u windowSize = window.getSize();
+
+    sf::Text title(font, "GAME HISTORY (latest first 15)", 30);
     title.setFillColor(sf::Color::Yellow);
-    title.setPosition({60, 30});
+    sf::FloatRect titleRect = title.getLocalBounds();
+    title.setPosition({(windowSize.x - titleRect.size.x) / 2.0f, 30.0f});
 
     window.clear(sf::Color(45, 45, 48));
     window.draw(title);
 
     int y = 100;
-    int lineHeight = 30;
-    for (size_t i = 0; i < records.size() && i < 15; ++i) {
-        sf::Text line(font, History::formatRecord(records[i]), 16);
-        line.setPosition({20, static_cast<float>(y)});
+    int lineHeight = 35;
+    for (size_t i = 0; i < records.size() && i < 20; ++i) {
+        sf::Text line(font, History::formatRecord(records[i]), 18);
+        line.setPosition({50.0f, static_cast<float>(y)});
         line.setFillColor(sf::Color::White);
         window.draw(line);
         y += lineHeight;
     }
-    sf::Text hint(font, "Press any key or ESC to return", 16);
+    sf::Text hint(font, "Press any key or ESC to return", 20);
     hint.setFillColor(sf::Color(180,180,180));
-    hint.setPosition({70, 550});
+    sf::FloatRect hintRect = hint.getLocalBounds();
+    hint.setPosition({(windowSize.x - hintRect.size.x) / 2.0f,
+                      static_cast<float>(windowSize.y) - 80.0f});
     window.draw(hint);
     window.display();
 
-    // Ждём события (клавиша или мышь) для выхода
     while (true) {
         auto optEvent = window.waitEvent();
         if (optEvent) {
@@ -97,10 +115,10 @@ void Render::showHistory() {
 }
 
 void Render::run(GameLogic& game) {
-    Menu menu(450.0f, 550.0f, font);
+    sf::Vector2u winSize = window.getSize();
+    Menu menu(static_cast<float>(winSize.x), static_cast<float>(winSize.y), font);
 
     while (window.isOpen()) {
-        // Обработка событий
         while (auto optEvent = window.pollEvent()) {
             auto& event = *optEvent;
 
@@ -110,7 +128,7 @@ void Render::run(GameLogic& game) {
 
             sf::Vector2f mousePos = window.mapPixelToCoords(sf::Mouse::getPosition(window));
 
-            // Состояние MENU
+            // MENU
             if (currentState == GameState::MENU) {
                 if (auto* key = event.getIf<sf::Event::KeyPressed>()) {
                     if (key->scancode == sf::Keyboard::Scan::Up) menu.moveUp(currentState);
@@ -133,7 +151,7 @@ void Render::run(GameLogic& game) {
                     }
                 }
             }
-            // Состояние DIFFICULTY_SELECT
+            // DIFFICULTY SELECT
             else if (currentState == GameState::DIFFICULTY_SELECT) {
                 if (auto* key = event.getIf<sf::Event::KeyPressed>()) {
                     if (key->scancode == sf::Keyboard::Scan::Up) menu.moveUp(currentState);
@@ -156,15 +174,19 @@ void Render::run(GameLogic& game) {
                     }
                 }
             }
-            // Состояние PLAYING
+            // PLAYING
             else if (currentState == GameState::PLAYING) {
                 if (auto* mouse = event.getIf<sf::Event::MouseButtonPressed>()) {
                     if (mouse->button == sf::Mouse::Button::Left) {
-                        float curTileSize = 450.0f / game.getSize();
-                        int x = static_cast<int>(mouse->position.x / curTileSize);
-                        int y = static_cast<int>(mouse->position.y / curTileSize);
-                        if (x < game.getSize() && y < game.getSize())
-                            game.move(y * game.getSize() + x);
+                        sf::Vector2u winSize = window.getSize();
+                        float boardSizePx = std::min(winSize.x, winSize.y - 100);
+                        float cellSize = boardSizePx / game.getSize();
+                        float offsetX = (winSize.x - boardSizePx) / 2.0f;
+                        float offsetY = (winSize.y - boardSizePx - 100) / 2.0f;
+                        int col = static_cast<int>((mouse->position.x - offsetX) / cellSize);
+                        int row = static_cast<int>((mouse->position.y - offsetY) / cellSize);
+                        if (col >= 0 && col < game.getSize() && row >= 0 && row < game.getSize())
+                            game.move(row * game.getSize() + col);
                     }
                 }
                 if (auto* key = event.getIf<sf::Event::KeyPressed>()) {
@@ -175,13 +197,13 @@ void Render::run(GameLogic& game) {
                     }
                 }
             }
-            // Состояние HISTORY
+            // HISTORY
             else if (currentState == GameState::HISTORY) {
                 if (event.is<sf::Event::KeyPressed>() || event.is<sf::Event::MouseButtonPressed>()) {
                     currentState = GameState::MENU;
                 }
             }
-            // Состояние ABOUT
+            // ABOUT
             else if (currentState == GameState::ABOUT) {
                 if (event.is<sf::Event::KeyPressed>() || event.is<sf::Event::MouseButtonPressed>()) {
                     currentState = GameState::MENU;
@@ -200,8 +222,11 @@ void Render::run(GameLogic& game) {
             currentState = GameState::MENU;
             continue;
         } else if (currentState == GameState::ABOUT) {
-            sf::Text about(font, "Coursework: 15 Puzzle\nAuthor: Serov L.A.\nGroup 25-IVT-2-1\n\nPress any key...", 24);
-            about.setPosition({50, 150});
+            sf::Text about(font, "Coursework: Game application 'Tag'\nCompleted: Serov Leonid Aleksandrovich\nGroup: 25-IVT-2-1\nScientific supervisor: Senior lecturer at the Department of 'VST'\n Matinov Dmitry Sergeevich\n\nCity: Nigniy Novgorod\nYear of writing: 2026\n\nPress any key...", 28);
+            about.setFillColor(sf::Color::White);
+            sf::FloatRect aboutRect = about.getLocalBounds();
+            about.setPosition({(winSize.x - aboutRect.size.x) / 2.0f,
+                               (winSize.y - aboutRect.size.y) / 2.0f});
             window.draw(about);
         }
         window.display();
