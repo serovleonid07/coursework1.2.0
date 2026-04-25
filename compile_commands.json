@@ -1,0 +1,32 @@
+[
+{
+  "directory": "C:/Users/user/coursework1.2.0/build",
+  "command": "C:\\msys64\\ucrt64\\bin\\c++.exe  @CMakeFiles/coursework1.2.0.dir/includes_CXX.rsp -std=gnu++17 -o CMakeFiles\\coursework1.2.0.dir\\src\\main.cpp.obj -c C:\\Users\\user\\coursework1.2.0\\src\\main.cpp",
+  "file": "C:/Users/user/coursework1.2.0/src/main.cpp",
+  "output": "CMakeFiles/coursework1.2.0.dir/src/main.cpp.obj"
+},
+{
+  "directory": "C:/Users/user/coursework1.2.0/build",
+  "command": "C:\\msys64\\ucrt64\\bin\\c++.exe  @CMakeFiles/coursework1.2.0.dir/includes_CXX.rsp -std=gnu++17 -o CMakeFiles\\coursework1.2.0.dir\\src\\GameLogic.cpp.obj -c C:\\Users\\user\\coursework1.2.0\\src\\GameLogic.cpp",
+  "file": "C:/Users/user/coursework1.2.0/src/GameLogic.cpp",
+  "output": "CMakeFiles/coursework1.2.0.dir/src/GameLogic.cpp.obj"
+},
+{
+  "directory": "C:/Users/user/coursework1.2.0/build",
+  "command": "C:\\msys64\\ucrt64\\bin\\c++.exe  @CMakeFiles/coursework1.2.0.dir/includes_CXX.rsp -std=gnu++17 -o CMakeFiles\\coursework1.2.0.dir\\src\\Render.cpp.obj -c C:\\Users\\user\\coursework1.2.0\\src\\Render.cpp",
+  "file": "C:/Users/user/coursework1.2.0/src/Render.cpp",
+  "output": "CMakeFiles/coursework1.2.0.dir/src/Render.cpp.obj"
+},
+{
+  "directory": "C:/Users/user/coursework1.2.0/build",
+  "command": "C:\\msys64\\ucrt64\\bin\\c++.exe  @CMakeFiles/coursework1.2.0.dir/includes_CXX.rsp -std=gnu++17 -o CMakeFiles\\coursework1.2.0.dir\\src\\Menu.cpp.obj -c C:\\Users\\user\\coursework1.2.0\\src\\Menu.cpp",
+  "file": "C:/Users/user/coursework1.2.0/src/Menu.cpp",
+  "output": "CMakeFiles/coursework1.2.0.dir/src/Menu.cpp.obj"
+},
+{
+  "directory": "C:/Users/user/coursework1.2.0/build",
+  "command": "C:\\msys64\\ucrt64\\bin\\c++.exe  @CMakeFiles/coursework1.2.0.dir/includes_CXX.rsp -std=gnu++17 -o CMakeFiles\\coursework1.2.0.dir\\src\\History.cpp.obj -c C:\\Users\\user\\coursework1.2.0\\src\\History.cpp",
+  "file": "C:/Users/user/coursework1.2.0/src/History.cpp",
+  "output": "CMakeFiles/coursework1.2.0.dir/src/History.cpp.obj"
+}
+]

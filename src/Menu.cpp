@@ -1,22 +1,19 @@
 #include "Menu.h"
 
-Menu::Menu(float width, float height, sf::Font& sharedFont) {
-    font = sharedFont;
+Menu::Menu(float width, float height, sf::Font& sharedFont) : font(sharedFont) {
     selectedItemIndex = 0;
 
-    std::vector<std::string> mainNames = { "Начать игру", "История", "Об игре", "Выход" };
-    std::vector<std::string> diffNames = { "3 x 3 (Легко)", "4 x 4 (Нормально)", "5 x 5 (Сложно)", "Назад" };
+    std::vector<std::string> mainNames = { "Start Game", "History", "About", "Exit" };
+    std::vector<std::string> diffNames = { "3 x 3 (Easy)", "4 x 4 (Normal)", "5 x 5 (Hard)", "Back" };
 
     auto createButtons = [&](std::vector<std::string>& names, std::vector<sf::Text>& items) {
         for (int i = 0; i < (int)names.size(); i++) {
-            sf::Text text;
-            text.setFont(font);
-            text.setString(names[i]);
+            sf::Text text(font, names[i], 40);
             text.setFillColor(i == 0 ? sf::Color::Yellow : sf::Color::White);
-            text.setCharacterSize(40);
             sf::FloatRect tr = text.getLocalBounds();
-            text.setOrigin(tr.left + tr.width / 2.0f, tr.top + tr.height / 2.0f);
-            text.setPosition(sf::Vector2f(width / 2.0f, height / (names.size() + 1) * (i + 1)));
+            text.setOrigin({tr.position.x + tr.size.x / 2.0f,
+                            tr.position.y + tr.size.y / 2.0f});
+            text.setPosition({width / 2.0f, height / (names.size() + 1) * (i + 1)});
             items.push_back(text);
         }
     };

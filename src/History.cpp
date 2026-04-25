@@ -19,7 +19,7 @@ static std::string getCurrentDateTime() {
 void History::addRecord(int size, int moves) {
     std::ofstream out(HISTORY_FILE, std::ios::app);
     if (!out) {
-        std::cerr << "Ошибка: не удалось открыть файл истории для записи.\n";
+        std::cerr << "Error: cannot open history file for writing.\n";
         return;
     }
     out << getCurrentDateTime() << "|" << size << "|" << moves << "\n";
@@ -44,8 +44,8 @@ std::vector<GameRecord> History::loadRecords() {
 }
 
 std::string History::formatRecord(const GameRecord& rec) {
-    return rec.dateTime + "  |  Поле " + std::to_string(rec.boardSize) + "x" + std::to_string(rec.boardSize) +
-           "  |  Ходов: " + std::to_string(rec.moves);
+    return rec.dateTime + "  |  Board " + std::to_string(rec.boardSize) + "x" + std::to_string(rec.boardSize) +
+           "  |  Moves: " + std::to_string(rec.moves);
 }
 
 void History::clearHistory() {
