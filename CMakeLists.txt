@@ -49,3 +49,33 @@ if(EXISTS "${ASSETS_DIR}")
 else()
     message(WARNING "Папка 111 не найдена, копирование ресурсов отключено")
 endif()
+
+set(MINGW_BIN "C:/msys64/ucrt64/bin")
+if(EXISTS "${MINGW_BIN}/libgcc_s_seh-1.dll")
+    add_custom_command(TARGET coursework1.2.0 POST_BUILD
+        COMMAND ${CMAKE_COMMAND} -E copy_if_different
+            "${MINGW_BIN}/libgcc_s_seh-1.dll"
+            $<TARGET_FILE_DIR:coursework1.2.0>
+        COMMENT "Копирование libgcc_s_seh-1.dll"
+    )
+endif()
+
+set(MINGW_BIN "C:/msys64/ucrt64/bin")
+if(EXISTS "${MINGW_BIN}/libwinpthread-1.dll")
+    add_custom_command(TARGET coursework1.2.0 POST_BUILD
+        COMMAND ${CMAKE_COMMAND} -E copy_if_different
+            "${MINGW_BIN}/libwinpthread-1.dll"
+            $<TARGET_FILE_DIR:coursework1.2.0>
+        COMMENT "Копирование libwinpthread-1.dll"
+    )
+endif()
+
+set(MINGW_BIN "C:/msys64/ucrt64/bin")
+if(EXISTS "${MINGW_BIN}/libstdc++-6.dll")
+    add_custom_command(TARGET coursework1.2.0 POST_BUILD
+        COMMAND ${CMAKE_COMMAND} -E copy_if_different
+            "${MINGW_BIN}/libstdc++-6.dll"
+            $<TARGET_FILE_DIR:coursework1.2.0>
+        COMMENT "Копирование libstdc++-6.dll"
+    )
+endif()

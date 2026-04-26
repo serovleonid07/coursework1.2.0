@@ -196,12 +196,164 @@ TagGame.exe: CMakeFiles/coursework1.2.0.dir/link.txt
 	"C:\Program Files\CMake\bin\cmake.exe" -E copy_if_different C:/Users/user/coursework1.2.0/111/background.png C:/Users/user/coursework1.2.0/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold "Copying C:/Users/user/coursework1.2.0/111/backgroundh.png"
 	"C:\Program Files\CMake\bin\cmake.exe" -E copy_if_different C:/Users/user/coursework1.2.0/111/backgroundh.png C:/Users/user/coursework1.2.0/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold "Copying C:/Users/user/coursework1.2.0/111/libFLAC++.dll"
+	"C:\Program Files\CMake\bin\cmake.exe" -E copy_if_different C:/Users/user/coursework1.2.0/111/libFLAC++.dll C:/Users/user/coursework1.2.0/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold "Copying C:/Users/user/coursework1.2.0/111/libFLAC.dll"
+	"C:\Program Files\CMake\bin\cmake.exe" -E copy_if_different C:/Users/user/coursework1.2.0/111/libFLAC.dll C:/Users/user/coursework1.2.0/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold "Copying C:/Users/user/coursework1.2.0/111/libasprintf-0.dll"
+	"C:\Program Files\CMake\bin\cmake.exe" -E copy_if_different C:/Users/user/coursework1.2.0/111/libasprintf-0.dll C:/Users/user/coursework1.2.0/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold "Copying C:/Users/user/coursework1.2.0/111/libatomic-1.dll"
+	"C:\Program Files\CMake\bin\cmake.exe" -E copy_if_different C:/Users/user/coursework1.2.0/111/libatomic-1.dll C:/Users/user/coursework1.2.0/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold "Copying C:/Users/user/coursework1.2.0/111/libb2-1.dll"
+	"C:\Program Files\CMake\bin\cmake.exe" -E copy_if_different C:/Users/user/coursework1.2.0/111/libb2-1.dll C:/Users/user/coursework1.2.0/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold "Copying C:/Users/user/coursework1.2.0/111/libbrotlicommon.dll"
+	"C:\Program Files\CMake\bin\cmake.exe" -E copy_if_different C:/Users/user/coursework1.2.0/111/libbrotlicommon.dll C:/Users/user/coursework1.2.0/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold "Copying C:/Users/user/coursework1.2.0/111/libbrotlidec.dll"
+	"C:\Program Files\CMake\bin\cmake.exe" -E copy_if_different C:/Users/user/coursework1.2.0/111/libbrotlidec.dll C:/Users/user/coursework1.2.0/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold "Copying C:/Users/user/coursework1.2.0/111/libbrotlienc.dll"
+	"C:\Program Files\CMake\bin\cmake.exe" -E copy_if_different C:/Users/user/coursework1.2.0/111/libbrotlienc.dll C:/Users/user/coursework1.2.0/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold "Copying C:/Users/user/coursework1.2.0/111/libbz2-1.dll"
+	"C:\Program Files\CMake\bin\cmake.exe" -E copy_if_different C:/Users/user/coursework1.2.0/111/libbz2-1.dll C:/Users/user/coursework1.2.0/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold "Copying C:/Users/user/coursework1.2.0/111/libcharset-1.dll"
+	"C:\Program Files\CMake\bin\cmake.exe" -E copy_if_different C:/Users/user/coursework1.2.0/111/libcharset-1.dll C:/Users/user/coursework1.2.0/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold "Copying C:/Users/user/coursework1.2.0/111/libcrypto-3-x64.dll"
+	"C:\Program Files\CMake\bin\cmake.exe" -E copy_if_different C:/Users/user/coursework1.2.0/111/libcrypto-3-x64.dll C:/Users/user/coursework1.2.0/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold "Copying C:/Users/user/coursework1.2.0/111/libexpat-1.dll"
+	"C:\Program Files\CMake\bin\cmake.exe" -E copy_if_different C:/Users/user/coursework1.2.0/111/libexpat-1.dll C:/Users/user/coursework1.2.0/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold "Copying C:/Users/user/coursework1.2.0/111/libffi-8.dll"
+	"C:\Program Files\CMake\bin\cmake.exe" -E copy_if_different C:/Users/user/coursework1.2.0/111/libffi-8.dll C:/Users/user/coursework1.2.0/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold "Copying C:/Users/user/coursework1.2.0/111/libformw6.dll"
+	"C:\Program Files\CMake\bin\cmake.exe" -E copy_if_different C:/Users/user/coursework1.2.0/111/libformw6.dll C:/Users/user/coursework1.2.0/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold "Copying C:/Users/user/coursework1.2.0/111/libfreetype-6.dll"
+	"C:\Program Files\CMake\bin\cmake.exe" -E copy_if_different C:/Users/user/coursework1.2.0/111/libfreetype-6.dll C:/Users/user/coursework1.2.0/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold "Copying C:/Users/user/coursework1.2.0/111/libgcc_s_seh-1.dll"
+	"C:\Program Files\CMake\bin\cmake.exe" -E copy_if_different C:/Users/user/coursework1.2.0/111/libgcc_s_seh-1.dll C:/Users/user/coursework1.2.0/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold "Copying C:/Users/user/coursework1.2.0/111/libgio-2.0-0.dll"
+	"C:\Program Files\CMake\bin\cmake.exe" -E copy_if_different C:/Users/user/coursework1.2.0/111/libgio-2.0-0.dll C:/Users/user/coursework1.2.0/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold "Copying C:/Users/user/coursework1.2.0/111/libgirepository-2.0-0.dll"
+	"C:\Program Files\CMake\bin\cmake.exe" -E copy_if_different C:/Users/user/coursework1.2.0/111/libgirepository-2.0-0.dll C:/Users/user/coursework1.2.0/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold "Copying C:/Users/user/coursework1.2.0/111/libglib-2.0-0.dll"
+	"C:\Program Files\CMake\bin\cmake.exe" -E copy_if_different C:/Users/user/coursework1.2.0/111/libglib-2.0-0.dll C:/Users/user/coursework1.2.0/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold "Copying C:/Users/user/coursework1.2.0/111/libgmodule-2.0-0.dll"
+	"C:\Program Files\CMake\bin\cmake.exe" -E copy_if_different C:/Users/user/coursework1.2.0/111/libgmodule-2.0-0.dll C:/Users/user/coursework1.2.0/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold "Copying C:/Users/user/coursework1.2.0/111/libgmp-10.dll"
+	"C:\Program Files\CMake\bin\cmake.exe" -E copy_if_different C:/Users/user/coursework1.2.0/111/libgmp-10.dll C:/Users/user/coursework1.2.0/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold "Copying C:/Users/user/coursework1.2.0/111/libgmpxx-4.dll"
+	"C:\Program Files\CMake\bin\cmake.exe" -E copy_if_different C:/Users/user/coursework1.2.0/111/libgmpxx-4.dll C:/Users/user/coursework1.2.0/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold "Copying C:/Users/user/coursework1.2.0/111/libgobject-2.0-0.dll"
+	"C:\Program Files\CMake\bin\cmake.exe" -E copy_if_different C:/Users/user/coursework1.2.0/111/libgobject-2.0-0.dll C:/Users/user/coursework1.2.0/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold "Copying C:/Users/user/coursework1.2.0/111/libgomp-1.dll"
+	"C:\Program Files\CMake\bin\cmake.exe" -E copy_if_different C:/Users/user/coursework1.2.0/111/libgomp-1.dll C:/Users/user/coursework1.2.0/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold "Copying C:/Users/user/coursework1.2.0/111/libgraphite2.dll"
+	"C:\Program Files\CMake\bin\cmake.exe" -E copy_if_different C:/Users/user/coursework1.2.0/111/libgraphite2.dll C:/Users/user/coursework1.2.0/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold "Copying C:/Users/user/coursework1.2.0/111/libgthread-2.0-0.dll"
+	"C:\Program Files\CMake\bin\cmake.exe" -E copy_if_different C:/Users/user/coursework1.2.0/111/libgthread-2.0-0.dll C:/Users/user/coursework1.2.0/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold "Copying C:/Users/user/coursework1.2.0/111/libharfbuzz-0.dll"
+	"C:\Program Files\CMake\bin\cmake.exe" -E copy_if_different C:/Users/user/coursework1.2.0/111/libharfbuzz-0.dll C:/Users/user/coursework1.2.0/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold "Copying C:/Users/user/coursework1.2.0/111/libharfbuzz-gobject-0.dll"
+	"C:\Program Files\CMake\bin\cmake.exe" -E copy_if_different C:/Users/user/coursework1.2.0/111/libharfbuzz-gobject-0.dll C:/Users/user/coursework1.2.0/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold "Copying C:/Users/user/coursework1.2.0/111/libharfbuzz-raster-0.dll"
+	"C:\Program Files\CMake\bin\cmake.exe" -E copy_if_different C:/Users/user/coursework1.2.0/111/libharfbuzz-raster-0.dll C:/Users/user/coursework1.2.0/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold "Copying C:/Users/user/coursework1.2.0/111/libharfbuzz-subset-0.dll"
+	"C:\Program Files\CMake\bin\cmake.exe" -E copy_if_different C:/Users/user/coursework1.2.0/111/libharfbuzz-subset-0.dll C:/Users/user/coursework1.2.0/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold "Copying C:/Users/user/coursework1.2.0/111/libharfbuzz-vector-0.dll"
+	"C:\Program Files\CMake\bin\cmake.exe" -E copy_if_different C:/Users/user/coursework1.2.0/111/libharfbuzz-vector-0.dll C:/Users/user/coursework1.2.0/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold "Copying C:/Users/user/coursework1.2.0/111/libhistory8.dll"
+	"C:\Program Files\CMake\bin\cmake.exe" -E copy_if_different C:/Users/user/coursework1.2.0/111/libhistory8.dll C:/Users/user/coursework1.2.0/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold "Copying C:/Users/user/coursework1.2.0/111/libiconv-2.dll"
+	"C:\Program Files\CMake\bin\cmake.exe" -E copy_if_different C:/Users/user/coursework1.2.0/111/libiconv-2.dll C:/Users/user/coursework1.2.0/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold "Copying C:/Users/user/coursework1.2.0/111/libintl-8.dll"
+	"C:\Program Files\CMake\bin\cmake.exe" -E copy_if_different C:/Users/user/coursework1.2.0/111/libintl-8.dll C:/Users/user/coursework1.2.0/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold "Copying C:/Users/user/coursework1.2.0/111/libisl-23.dll"
+	"C:\Program Files\CMake\bin\cmake.exe" -E copy_if_different C:/Users/user/coursework1.2.0/111/libisl-23.dll C:/Users/user/coursework1.2.0/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold "Copying C:/Users/user/coursework1.2.0/111/libjpeg-8.dll"
+	"C:\Program Files\CMake\bin\cmake.exe" -E copy_if_different C:/Users/user/coursework1.2.0/111/libjpeg-8.dll C:/Users/user/coursework1.2.0/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold "Copying C:/Users/user/coursework1.2.0/111/liblzma-5.dll"
+	"C:\Program Files\CMake\bin\cmake.exe" -E copy_if_different C:/Users/user/coursework1.2.0/111/liblzma-5.dll C:/Users/user/coursework1.2.0/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold "Copying C:/Users/user/coursework1.2.0/111/libmenuw6.dll"
+	"C:\Program Files\CMake\bin\cmake.exe" -E copy_if_different C:/Users/user/coursework1.2.0/111/libmenuw6.dll C:/Users/user/coursework1.2.0/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold "Copying C:/Users/user/coursework1.2.0/111/libmpc-3.dll"
+	"C:\Program Files\CMake\bin\cmake.exe" -E copy_if_different C:/Users/user/coursework1.2.0/111/libmpc-3.dll C:/Users/user/coursework1.2.0/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold "Copying C:/Users/user/coursework1.2.0/111/libmpdec++-4.dll"
+	"C:\Program Files\CMake\bin\cmake.exe" -E copy_if_different C:/Users/user/coursework1.2.0/111/libmpdec++-4.dll C:/Users/user/coursework1.2.0/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold "Copying C:/Users/user/coursework1.2.0/111/libmpdec-4.dll"
+	"C:\Program Files\CMake\bin\cmake.exe" -E copy_if_different C:/Users/user/coursework1.2.0/111/libmpdec-4.dll C:/Users/user/coursework1.2.0/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold "Copying C:/Users/user/coursework1.2.0/111/libmpfr-6.dll"
+	"C:\Program Files\CMake\bin\cmake.exe" -E copy_if_different C:/Users/user/coursework1.2.0/111/libmpfr-6.dll C:/Users/user/coursework1.2.0/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold "Copying C:/Users/user/coursework1.2.0/111/libmysofa.dll"
+	"C:\Program Files\CMake\bin\cmake.exe" -E copy_if_different C:/Users/user/coursework1.2.0/111/libmysofa.dll C:/Users/user/coursework1.2.0/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold "Copying C:/Users/user/coursework1.2.0/111/libncurses++w6.dll"
+	"C:\Program Files\CMake\bin\cmake.exe" -E copy_if_different C:/Users/user/coursework1.2.0/111/libncurses++w6.dll C:/Users/user/coursework1.2.0/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold "Copying C:/Users/user/coursework1.2.0/111/libncursesw6.dll"
+	"C:\Program Files\CMake\bin\cmake.exe" -E copy_if_different C:/Users/user/coursework1.2.0/111/libncursesw6.dll C:/Users/user/coursework1.2.0/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold "Copying C:/Users/user/coursework1.2.0/111/libogg-0.dll"
+	"C:\Program Files\CMake\bin\cmake.exe" -E copy_if_different C:/Users/user/coursework1.2.0/111/libogg-0.dll C:/Users/user/coursework1.2.0/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold "Copying C:/Users/user/coursework1.2.0/111/libopenal-1.dll"
+	"C:\Program Files\CMake\bin\cmake.exe" -E copy_if_different C:/Users/user/coursework1.2.0/111/libopenal-1.dll C:/Users/user/coursework1.2.0/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold "Copying C:/Users/user/coursework1.2.0/111/libpanelw6.dll"
+	"C:\Program Files\CMake\bin\cmake.exe" -E copy_if_different C:/Users/user/coursework1.2.0/111/libpanelw6.dll C:/Users/user/coursework1.2.0/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold "Copying C:/Users/user/coursework1.2.0/111/libpcre2-16-0.dll"
+	"C:\Program Files\CMake\bin\cmake.exe" -E copy_if_different C:/Users/user/coursework1.2.0/111/libpcre2-16-0.dll C:/Users/user/coursework1.2.0/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold "Copying C:/Users/user/coursework1.2.0/111/libpcre2-32-0.dll"
+	"C:\Program Files\CMake\bin\cmake.exe" -E copy_if_different C:/Users/user/coursework1.2.0/111/libpcre2-32-0.dll C:/Users/user/coursework1.2.0/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold "Copying C:/Users/user/coursework1.2.0/111/libpcre2-8-0.dll"
+	"C:\Program Files\CMake\bin\cmake.exe" -E copy_if_different C:/Users/user/coursework1.2.0/111/libpcre2-8-0.dll C:/Users/user/coursework1.2.0/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold "Copying C:/Users/user/coursework1.2.0/111/libpcre2-posix-3.dll"
+	"C:\Program Files\CMake\bin\cmake.exe" -E copy_if_different C:/Users/user/coursework1.2.0/111/libpcre2-posix-3.dll C:/Users/user/coursework1.2.0/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold "Copying C:/Users/user/coursework1.2.0/111/libpkgconf-7.dll"
+	"C:\Program Files\CMake\bin\cmake.exe" -E copy_if_different C:/Users/user/coursework1.2.0/111/libpkgconf-7.dll C:/Users/user/coursework1.2.0/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold "Copying C:/Users/user/coursework1.2.0/111/libpng16-16.dll"
+	"C:\Program Files\CMake\bin\cmake.exe" -E copy_if_different C:/Users/user/coursework1.2.0/111/libpng16-16.dll C:/Users/user/coursework1.2.0/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold "Copying C:/Users/user/coursework1.2.0/111/libpython3.14.dll"
+	"C:\Program Files\CMake\bin\cmake.exe" -E copy_if_different C:/Users/user/coursework1.2.0/111/libpython3.14.dll C:/Users/user/coursework1.2.0/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold "Copying C:/Users/user/coursework1.2.0/111/libpython3.dll"
+	"C:\Program Files\CMake\bin\cmake.exe" -E copy_if_different C:/Users/user/coursework1.2.0/111/libpython3.dll C:/Users/user/coursework1.2.0/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold "Copying C:/Users/user/coursework1.2.0/111/libquadmath-0.dll"
+	"C:\Program Files\CMake\bin\cmake.exe" -E copy_if_different C:/Users/user/coursework1.2.0/111/libquadmath-0.dll C:/Users/user/coursework1.2.0/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold "Copying C:/Users/user/coursework1.2.0/111/libreadline8.dll"
+	"C:\Program Files\CMake\bin\cmake.exe" -E copy_if_different C:/Users/user/coursework1.2.0/111/libreadline8.dll C:/Users/user/coursework1.2.0/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold "Copying C:/Users/user/coursework1.2.0/111/libsfml-audio-3.dll"
+	"C:\Program Files\CMake\bin\cmake.exe" -E copy_if_different C:/Users/user/coursework1.2.0/111/libsfml-audio-3.dll C:/Users/user/coursework1.2.0/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold "Copying C:/Users/user/coursework1.2.0/111/libsfml-graphics-3.dll"
 	"C:\Program Files\CMake\bin\cmake.exe" -E copy_if_different C:/Users/user/coursework1.2.0/111/libsfml-graphics-3.dll C:/Users/user/coursework1.2.0/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold "Copying C:/Users/user/coursework1.2.0/111/libsfml-network-3.dll"
+	"C:\Program Files\CMake\bin\cmake.exe" -E copy_if_different C:/Users/user/coursework1.2.0/111/libsfml-network-3.dll C:/Users/user/coursework1.2.0/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold "Copying C:/Users/user/coursework1.2.0/111/libsfml-system-3.dll"
 	"C:\Program Files\CMake\bin\cmake.exe" -E copy_if_different C:/Users/user/coursework1.2.0/111/libsfml-system-3.dll C:/Users/user/coursework1.2.0/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold "Copying C:/Users/user/coursework1.2.0/111/libsfml-window-3.dll"
 	"C:\Program Files\CMake\bin\cmake.exe" -E copy_if_different C:/Users/user/coursework1.2.0/111/libsfml-window-3.dll C:/Users/user/coursework1.2.0/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold "Copying C:/Users/user/coursework1.2.0/111/libsqlite3-0.dll"
+	"C:\Program Files\CMake\bin\cmake.exe" -E copy_if_different C:/Users/user/coursework1.2.0/111/libsqlite3-0.dll C:/Users/user/coursework1.2.0/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold "Copying C:/Users/user/coursework1.2.0/111/libssl-3-x64.dll"
+	"C:\Program Files\CMake\bin\cmake.exe" -E copy_if_different C:/Users/user/coursework1.2.0/111/libssl-3-x64.dll C:/Users/user/coursework1.2.0/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold "Copying C:/Users/user/coursework1.2.0/111/libstdc++-6.dll"
+	"C:\Program Files\CMake\bin\cmake.exe" -E copy_if_different C:/Users/user/coursework1.2.0/111/libstdc++-6.dll C:/Users/user/coursework1.2.0/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold "Copying C:/Users/user/coursework1.2.0/111/libsystre-0.dll"
+	"C:\Program Files\CMake\bin\cmake.exe" -E copy_if_different C:/Users/user/coursework1.2.0/111/libsystre-0.dll C:/Users/user/coursework1.2.0/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold "Copying C:/Users/user/coursework1.2.0/111/libtermcap-0.dll"
+	"C:\Program Files\CMake\bin\cmake.exe" -E copy_if_different C:/Users/user/coursework1.2.0/111/libtermcap-0.dll C:/Users/user/coursework1.2.0/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold "Copying C:/Users/user/coursework1.2.0/111/libtre-5.dll"
+	"C:\Program Files\CMake\bin\cmake.exe" -E copy_if_different C:/Users/user/coursework1.2.0/111/libtre-5.dll C:/Users/user/coursework1.2.0/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold "Copying C:/Users/user/coursework1.2.0/111/libturbojpeg.dll"
+	"C:\Program Files\CMake\bin\cmake.exe" -E copy_if_different C:/Users/user/coursework1.2.0/111/libturbojpeg.dll C:/Users/user/coursework1.2.0/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold "Copying C:/Users/user/coursework1.2.0/111/libvorbis-0.dll"
+	"C:\Program Files\CMake\bin\cmake.exe" -E copy_if_different C:/Users/user/coursework1.2.0/111/libvorbis-0.dll C:/Users/user/coursework1.2.0/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold "Copying C:/Users/user/coursework1.2.0/111/libvorbisenc-2.dll"
+	"C:\Program Files\CMake\bin\cmake.exe" -E copy_if_different C:/Users/user/coursework1.2.0/111/libvorbisenc-2.dll C:/Users/user/coursework1.2.0/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold "Copying C:/Users/user/coursework1.2.0/111/libvorbisfile-3.dll"
+	"C:\Program Files\CMake\bin\cmake.exe" -E copy_if_different C:/Users/user/coursework1.2.0/111/libvorbisfile-3.dll C:/Users/user/coursework1.2.0/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold "Copying C:/Users/user/coursework1.2.0/111/libwinpthread-1.dll"
+	"C:\Program Files\CMake\bin\cmake.exe" -E copy_if_different C:/Users/user/coursework1.2.0/111/libwinpthread-1.dll C:/Users/user/coursework1.2.0/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold "Copying C:/Users/user/coursework1.2.0/111/libxxhash.dll"
+	"C:\Program Files\CMake\bin\cmake.exe" -E copy_if_different C:/Users/user/coursework1.2.0/111/libxxhash.dll C:/Users/user/coursework1.2.0/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold "Copying C:/Users/user/coursework1.2.0/111/libzstd.dll"
+	"C:\Program Files\CMake\bin\cmake.exe" -E copy_if_different C:/Users/user/coursework1.2.0/111/libzstd.dll C:/Users/user/coursework1.2.0/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold "Копирование libgcc_s_seh-1.dll"
+	"C:\Program Files\CMake\bin\cmake.exe" -E copy_if_different C:/msys64/ucrt64/bin/libgcc_s_seh-1.dll C:/Users/user/coursework1.2.0/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold "Копирование libwinpthread-1.dll"
+	"C:\Program Files\CMake\bin\cmake.exe" -E copy_if_different C:/msys64/ucrt64/bin/libwinpthread-1.dll C:/Users/user/coursework1.2.0/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold "Копирование libstdc++-6.dll"
+	"C:\Program Files\CMake\bin\cmake.exe" -E copy_if_different C:/msys64/ucrt64/bin/libstdc++-6.dll C:/Users/user/coursework1.2.0/build
 
 # Rule to build all files generated by this target.
 CMakeFiles/coursework1.2.0.dir/build: TagGame.exe
