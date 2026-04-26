@@ -6,7 +6,7 @@
 #include <iomanip>
 #include <algorithm>
 
-const std::string HISTORY_FILE = "history.txt";
+const std::string HISTORY_FILE = "C:/Users/user/coursework1.2.0/history.txt";
 
 static std::string getCurrentDateTime() {
     auto now = std::time(nullptr);
@@ -19,16 +19,21 @@ static std::string getCurrentDateTime() {
 void History::addRecord(int size, int moves) {
     std::ofstream out(HISTORY_FILE, std::ios::app);
     if (!out) {
-        std::cerr << "Error: cannot open history file for writing.\n";
+        std::cerr << "ERROR: Cannot open " << HISTORY_FILE << " for writing." << std::endl;
         return;
     }
     out << getCurrentDateTime() << "|" << size << "|" << moves << "\n";
+    out.close();
+    std::cout << "Saved: " << size << "x" << size << " moves=" << moves << std::endl;
 }
 
 std::vector<GameRecord> History::loadRecords() {
     std::vector<GameRecord> records;
     std::ifstream in(HISTORY_FILE);
-    if (!in) return records;
+    if (!in) {
+        std::cout << "No history file yet." << std::endl;
+        return records;
+    }
     std::string line;
     while (std::getline(in, line)) {
         std::stringstream ss(line);
@@ -39,7 +44,9 @@ std::vector<GameRecord> History::loadRecords() {
         if (std::getline(ss, token, '|')) rec.moves = std::stoi(token);
         records.push_back(rec);
     }
-    std::reverse(records.begin(), records.end());
+    in.close();
+    std::reverse(records.begin(), records.end()); // последние сверху
+    std::cout << "Loaded " << records.size() << " records." << std::endl;
     return records;
 }
 

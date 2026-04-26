@@ -4,12 +4,24 @@
 #include <iostream>
 
 Render::Render() : currentState(GameState::MENU), victorySaved(false) {
-    // Окно 1920x1080 без полноэкранного стиля
     window.create(sf::VideoMode({1920, 1080}), "Game application 'Tag'");
     window.setFramerateLimit(60);
     
     if (!font.openFromFile("arial.ttf")) {
         font.openFromFile("C:/Windows/Fonts/arial.ttf");
+    }
+    
+    if (!backgroundTexture.loadFromFile("background.png")) {
+        std::cerr << "ERROR: no load image background.png" << std::endl;
+        // можно задать запасной цвет фона (или просто игнорировать)
+    } else {
+        std::cout << "Image load, size: " 
+                << backgroundTexture.getSize().x << "x" 
+                << backgroundTexture.getSize().y << std::endl;
+    }
+    // Загружаем фон для истории
+    if (!historyBackgroundTexture.loadFromFile("backgroundh.png")) {
+        std::cerr << "Warning: backgroundh.png not loaded" << std::endl;
     }
 }
 
@@ -74,14 +86,26 @@ void Render::showHistory() {
     auto records = History::loadRecords();
     sf::Vector2u windowSize = window.getSize();
 
+    window.clear();
+
+    // Рисуем фон для истории, если текстура загружена
+    if (historyBackgroundTexture.getSize().x != 0) {
+        sf::Sprite bgSprite(historyBackgroundTexture);
+        bgSprite.setScale(sf::Vector2f(
+            static_cast<float>(windowSize.x) / historyBackgroundTexture.getSize().x,
+            static_cast<float>(windowSize.y) / historyBackgroundTexture.getSize().y
+        ));
+        window.draw(bgSprite);
+    }
+
+    // Заголовок
     sf::Text title(font, "GAME HISTORY (latest first 15)", 30);
-    title.setFillColor(sf::Color::Yellow);
+    title.setFillColor(sf::Color::Red);
     sf::FloatRect titleRect = title.getLocalBounds();
     title.setPosition({(windowSize.x - titleRect.size.x) / 2.0f, 30.0f});
-
-    window.clear(sf::Color(45, 45, 48));
     window.draw(title);
 
+    // Список записей
     int y = 100;
     int lineHeight = 35;
     for (size_t i = 0; i < records.size() && i < 20; ++i) {
@@ -91,14 +115,17 @@ void Render::showHistory() {
         window.draw(line);
         y += lineHeight;
     }
+
+    // Подсказка
     sf::Text hint(font, "Press any key or ESC to return", 20);
-    hint.setFillColor(sf::Color(180,180,180));
+    hint.setFillColor(sf::Color(180, 180, 180));
     sf::FloatRect hintRect = hint.getLocalBounds();
     hint.setPosition({(windowSize.x - hintRect.size.x) / 2.0f,
                       static_cast<float>(windowSize.y) - 80.0f});
     window.draw(hint);
     window.display();
 
+    // Ожидание нажатия
     while (true) {
         auto optEvent = window.waitEvent();
         if (optEvent) {
@@ -213,6 +240,18 @@ void Render::run(GameLogic& game) {
 
         // Отрисовка
         window.clear(sf::Color(45, 45, 48));
+
+        // Рисуем фон, если текстура загружена
+        if (backgroundTexture.getSize().x != 0) {
+            sf::Sprite bgSprite(backgroundTexture);
+            sf::Vector2u winSize = window.getSize();
+            bgSprite.setScale(sf::Vector2f(
+                static_cast<float>(winSize.x) / backgroundTexture.getSize().x,
+                static_cast<float>(winSize.y) / backgroundTexture.getSize().y
+            ));
+            window.draw(bgSprite);
+        }
+
         if (currentState == GameState::MENU || currentState == GameState::DIFFICULTY_SELECT) {
             menu.draw(window, currentState);
         } else if (currentState == GameState::PLAYING) {
@@ -223,10 +262,10 @@ void Render::run(GameLogic& game) {
             continue;
         } else if (currentState == GameState::ABOUT) {
             sf::Text about(font, "Coursework: Game application 'Tag'\nCompleted: Serov Leonid Aleksandrovich\nGroup: 25-IVT-2-1\nScientific supervisor: Senior lecturer at the Department of 'VST'\n Matinov Dmitry Sergeevich\n\nCity: Nigniy Novgorod\nYear of writing: 2026\n\nPress any key...", 28);
-            about.setFillColor(sf::Color::White);
+            about.setFillColor(sf::Color::Blue);
             sf::FloatRect aboutRect = about.getLocalBounds();
             about.setPosition({(winSize.x - aboutRect.size.x) / 2.0f,
-                               (winSize.y - aboutRect.size.y) / 2.0f});
+                            (winSize.y - aboutRect.size.y) / 2.0f});
             window.draw(about);
         }
         window.display();

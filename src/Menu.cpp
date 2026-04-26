@@ -9,7 +9,7 @@ Menu::Menu(float width, float height, sf::Font& sharedFont) : font(sharedFont) {
     auto createButtons = [&](std::vector<std::string>& names, std::vector<sf::Text>& items) {
         for (int i = 0; i < (int)names.size(); i++) {
             sf::Text text(font, names[i], 40);
-            text.setFillColor(i == 0 ? sf::Color::Yellow : sf::Color::White);
+            text.setFillColor(i == 0 ? sf::Color::Red : sf::Color::Blue);
             sf::FloatRect tr = text.getLocalBounds();
             text.setOrigin({tr.position.x + tr.size.x / 2.0f,
                             tr.position.y + tr.size.y / 2.0f});
@@ -38,17 +38,17 @@ int Menu::getClickedItem(sf::Vector2f mousePos, GameState state) {
 void Menu::moveUp(GameState state) {
     auto& items = (state == GameState::MENU) ? mainMenuItems : difficultyItems;
     if (selectedItemIndex - 1 >= 0) {
-        items[selectedItemIndex].setFillColor(sf::Color::White);
+        items[selectedItemIndex].setFillColor(sf::Color::Blue);
         selectedItemIndex--;
-        items[selectedItemIndex].setFillColor(sf::Color::Yellow);
+        items[selectedItemIndex].setFillColor(sf::Color::Red);
     }
 }
 
 void Menu::moveDown(GameState state) {
     auto& items = (state == GameState::MENU) ? mainMenuItems : difficultyItems;
     if (selectedItemIndex + 1 < (int)items.size()) {
-        items[selectedItemIndex].setFillColor(sf::Color::White);
+        items[selectedItemIndex].setFillColor(sf::Color::Blue);
         selectedItemIndex++;
-        items[selectedItemIndex].setFillColor(sf::Color::Yellow);
+        items[selectedItemIndex].setFillColor(sf::Color::Red);
     }
 }

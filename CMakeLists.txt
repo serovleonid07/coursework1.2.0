@@ -49,3 +49,21 @@ if(EXISTS "${ASSETS_DIR}")
 else()
     message(WARNING "Папка 111 не найдена, копирование файлов пропущено")
 endif()
+
+if(EXISTS "${ASSETS_DIR}/background.png")
+    add_custom_command(TARGET coursework1.2.0 POST_BUILD
+        COMMAND ${CMAKE_COMMAND} -E copy_if_different
+            "${ASSETS_DIR}/background.png"
+            $<TARGET_FILE_DIR:coursework1.2.0>
+        COMMENT "Copying background.png"
+    )
+endif()
+
+if(EXISTS "${ASSETS_DIR}/backgroundh.png")
+    add_custom_command(TARGET coursework1.2.0 POST_BUILD
+        COMMAND ${CMAKE_COMMAND} -E copy_if_different
+            "${ASSETS_DIR}/backgroundh.png"
+            $<TARGET_FILE_DIR:coursework1.2.0>
+        COMMENT "Copying backgroundh.png"
+    )
+endif()

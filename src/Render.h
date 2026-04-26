@@ -11,6 +11,9 @@ private:
     const int margin = 10;
     bool victorySaved;
 
+    sf::Texture backgroundTexture;          // фон для меню и игры
+    sf::Texture historyBackgroundTexture;   // фон для истории
+
     void drawBoard(const GameLogic& game);
     void showHistory();
 public:
