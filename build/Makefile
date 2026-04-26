@@ -128,6 +128,14 @@ coursework1.2.0/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\coursework1.2.0.dir\build.make CMakeFiles/coursework1.2.0.dir/build
 .PHONY : coursework1.2.0/fast
 
+resources.obj: resources.rc.obj
+.PHONY : resources.obj
+
+# target to build an object file
+resources.rc.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\coursework1.2.0.dir\build.make CMakeFiles/coursework1.2.0.dir/resources.rc.obj
+.PHONY : resources.rc.obj
+
 src/GameLogic.obj: src/GameLogic.cpp.obj
 .PHONY : src/GameLogic.obj
 
@@ -257,6 +265,7 @@ help:
 	@echo ... edit_cache
 	@echo ... rebuild_cache
 	@echo ... coursework1.2.0
+	@echo ... resources.obj
 	@echo ... src/GameLogic.obj
 	@echo ... src/GameLogic.i
 	@echo ... src/GameLogic.s

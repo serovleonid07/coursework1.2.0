@@ -5,17 +5,22 @@ set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
 set(SFML_ROOT "C:/msys64/ucrt64")
-
 include_directories("${SFML_ROOT}/include")
 link_directories("${SFML_ROOT}/lib")
 
-add_executable(coursework1.2.0
+# Добавьте 'resources.rc' в этот список
+set(SOURCES
     src/main.cpp
     src/GameLogic.cpp
     src/Render.cpp
     src/Menu.cpp
     src/History.cpp
+    ${CMAKE_CURRENT_SOURCE_DIR}/resources.rc
 )
+
+add_executable(coursework1.2.0 ${SOURCES})
+
+set_target_properties(coursework1.2.0 PROPERTIES OUTPUT_NAME "TagGame")
 
 target_link_libraries(coursework1.2.0
     sfml-graphics
@@ -23,47 +28,24 @@ target_link_libraries(coursework1.2.0
     sfml-system
 )
 
+# (Ваш существующий блок копирования ресурсов из папки 111...)
+
+# =====================================================
+# КОПИРОВАНИЕ ФАЙЛОВ ИЗ ПАПКИ "111" В ПАПКУ СБОРКИ
+# (шрифт, фоны, DLL)
+# =====================================================
+# Копирование ресурсов из папки 111 в папку сборки
 set(ASSETS_DIR "${CMAKE_CURRENT_SOURCE_DIR}/111")
-
 if(EXISTS "${ASSETS_DIR}")
-    # Копируем шрифт (если есть)
-    if(EXISTS "${ASSETS_DIR}/arial.ttf")
+    file(GLOB RESOURCES "${ASSETS_DIR}/*.*")
+    foreach(RES ${RESOURCES})
         add_custom_command(TARGET coursework1.2.0 POST_BUILD
             COMMAND ${CMAKE_COMMAND} -E copy_if_different
-                "${ASSETS_DIR}/arial.ttf"
+                "${RES}"
                 $<TARGET_FILE_DIR:coursework1.2.0>
-            COMMENT "Копирование шрифта из папки 111"
-        )
-    endif()
-
-    # Копируем все DLL из папки 111
-    file(GLOB DLL_FILES "${ASSETS_DIR}/*.dll")
-    foreach(DLL ${DLL_FILES})
-        add_custom_command(TARGET coursework1.2.0 POST_BUILD
-            COMMAND ${CMAKE_COMMAND} -E copy_if_different
-                "${DLL}"
-                $<TARGET_FILE_DIR:coursework1.2.0>
-            COMMENT "Копирование ${DLL}"
+            COMMENT "Copying ${RES}"
         )
     endforeach()
 else()
-    message(WARNING "Папка 111 не найдена, копирование файлов пропущено")
-endif()
-
-if(EXISTS "${ASSETS_DIR}/background.png")
-    add_custom_command(TARGET coursework1.2.0 POST_BUILD
-        COMMAND ${CMAKE_COMMAND} -E copy_if_different
-            "${ASSETS_DIR}/background.png"
-            $<TARGET_FILE_DIR:coursework1.2.0>
-        COMMENT "Copying background.png"
-    )
-endif()
-
-if(EXISTS "${ASSETS_DIR}/backgroundh.png")
-    add_custom_command(TARGET coursework1.2.0 POST_BUILD
-        COMMAND ${CMAKE_COMMAND} -E copy_if_different
-            "${ASSETS_DIR}/backgroundh.png"
-            $<TARGET_FILE_DIR:coursework1.2.0>
-        COMMENT "Copying backgroundh.png"
-    )
+    message(WARNING "Папка 111 не найдена, копирование ресурсов отключено")
 endif()

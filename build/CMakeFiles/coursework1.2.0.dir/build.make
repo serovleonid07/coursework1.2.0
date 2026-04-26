@@ -141,43 +141,70 @@ CMakeFiles/coursework1.2.0.dir/src/History.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/coursework1.2.0.dir/src/History.cpp.s"
 	C:\msys64\ucrt64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\user\coursework1.2.0\src\History.cpp -o CMakeFiles\coursework1.2.0.dir\src\History.cpp.s
 
+CMakeFiles/coursework1.2.0.dir/resources.rc.obj: CMakeFiles/coursework1.2.0.dir/flags.make
+CMakeFiles/coursework1.2.0.dir/resources.rc.obj: C:/Users/user/coursework1.2.0/resources.rc
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\user\coursework1.2.0\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building RC object CMakeFiles/coursework1.2.0.dir/resources.rc.obj"
+	C:\msys64\ucrt64\bin\windres.exe -O coff $(RC_DEFINES) $(RC_INCLUDES) $(RC_FLAGS) C:\Users\user\coursework1.2.0\resources.rc CMakeFiles\coursework1.2.0.dir\resources.rc.obj
+
 # Object files for target coursework1.2.0
 coursework1_2_0_OBJECTS = \
 "CMakeFiles/coursework1.2.0.dir/src/main.cpp.obj" \
 "CMakeFiles/coursework1.2.0.dir/src/GameLogic.cpp.obj" \
 "CMakeFiles/coursework1.2.0.dir/src/Render.cpp.obj" \
 "CMakeFiles/coursework1.2.0.dir/src/Menu.cpp.obj" \
-"CMakeFiles/coursework1.2.0.dir/src/History.cpp.obj"
+"CMakeFiles/coursework1.2.0.dir/src/History.cpp.obj" \
+"CMakeFiles/coursework1.2.0.dir/resources.rc.obj"
 
 # External object files for target coursework1.2.0
 coursework1_2_0_EXTERNAL_OBJECTS =
 
-coursework1.2.0.exe: CMakeFiles/coursework1.2.0.dir/src/main.cpp.obj
-coursework1.2.0.exe: CMakeFiles/coursework1.2.0.dir/src/GameLogic.cpp.obj
-coursework1.2.0.exe: CMakeFiles/coursework1.2.0.dir/src/Render.cpp.obj
-coursework1.2.0.exe: CMakeFiles/coursework1.2.0.dir/src/Menu.cpp.obj
-coursework1.2.0.exe: CMakeFiles/coursework1.2.0.dir/src/History.cpp.obj
-coursework1.2.0.exe: CMakeFiles/coursework1.2.0.dir/build.make
-coursework1.2.0.exe: CMakeFiles/coursework1.2.0.dir/linkLibs.rsp
-coursework1.2.0.exe: CMakeFiles/coursework1.2.0.dir/objects1.rsp
-coursework1.2.0.exe: CMakeFiles/coursework1.2.0.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=C:\Users\user\coursework1.2.0\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Linking CXX executable coursework1.2.0.exe"
+TagGame.exe: CMakeFiles/coursework1.2.0.dir/src/main.cpp.obj
+TagGame.exe: CMakeFiles/coursework1.2.0.dir/src/GameLogic.cpp.obj
+TagGame.exe: CMakeFiles/coursework1.2.0.dir/src/Render.cpp.obj
+TagGame.exe: CMakeFiles/coursework1.2.0.dir/src/Menu.cpp.obj
+TagGame.exe: CMakeFiles/coursework1.2.0.dir/src/History.cpp.obj
+TagGame.exe: CMakeFiles/coursework1.2.0.dir/resources.rc.obj
+TagGame.exe: CMakeFiles/coursework1.2.0.dir/build.make
+TagGame.exe: CMakeFiles/coursework1.2.0.dir/linkLibs.rsp
+TagGame.exe: CMakeFiles/coursework1.2.0.dir/objects1.rsp
+TagGame.exe: CMakeFiles/coursework1.2.0.dir/link.txt
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=C:\Users\user\coursework1.2.0\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Linking CXX executable TagGame.exe"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\coursework1.2.0.dir\link.txt --verbose=$(VERBOSE)
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold "Копирование шрифта из папки 111"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold "Copying C:/Users/user/coursework1.2.0/111/ARIALN.TTF"
+	"C:\Program Files\CMake\bin\cmake.exe" -E copy_if_different C:/Users/user/coursework1.2.0/111/ARIALN.TTF C:/Users/user/coursework1.2.0/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold "Copying C:/Users/user/coursework1.2.0/111/ARIALNB.TTF"
+	"C:\Program Files\CMake\bin\cmake.exe" -E copy_if_different C:/Users/user/coursework1.2.0/111/ARIALNB.TTF C:/Users/user/coursework1.2.0/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold "Copying C:/Users/user/coursework1.2.0/111/ARIALNBI.TTF"
+	"C:\Program Files\CMake\bin\cmake.exe" -E copy_if_different C:/Users/user/coursework1.2.0/111/ARIALNBI.TTF C:/Users/user/coursework1.2.0/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold "Copying C:/Users/user/coursework1.2.0/111/ARIALNI.TTF"
+	"C:\Program Files\CMake\bin\cmake.exe" -E copy_if_different C:/Users/user/coursework1.2.0/111/ARIALNI.TTF C:/Users/user/coursework1.2.0/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold "Copying C:/Users/user/coursework1.2.0/111/app_icon.ico"
+	"C:\Program Files\CMake\bin\cmake.exe" -E copy_if_different C:/Users/user/coursework1.2.0/111/app_icon.ico C:/Users/user/coursework1.2.0/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold "Copying C:/Users/user/coursework1.2.0/111/arial.ttf"
 	"C:\Program Files\CMake\bin\cmake.exe" -E copy_if_different C:/Users/user/coursework1.2.0/111/arial.ttf C:/Users/user/coursework1.2.0/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold "Копирование C:/Users/user/coursework1.2.0/111/libsfml-graphics-3.dll"
-	"C:\Program Files\CMake\bin\cmake.exe" -E copy_if_different C:/Users/user/coursework1.2.0/111/libsfml-graphics-3.dll C:/Users/user/coursework1.2.0/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold "Копирование C:/Users/user/coursework1.2.0/111/libsfml-system-3.dll"
-	"C:\Program Files\CMake\bin\cmake.exe" -E copy_if_different C:/Users/user/coursework1.2.0/111/libsfml-system-3.dll C:/Users/user/coursework1.2.0/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold "Копирование C:/Users/user/coursework1.2.0/111/libsfml-window-3.dll"
-	"C:\Program Files\CMake\bin\cmake.exe" -E copy_if_different C:/Users/user/coursework1.2.0/111/libsfml-window-3.dll C:/Users/user/coursework1.2.0/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold "Copying background.png"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold "Copying C:/Users/user/coursework1.2.0/111/arialbd.ttf"
+	"C:\Program Files\CMake\bin\cmake.exe" -E copy_if_different C:/Users/user/coursework1.2.0/111/arialbd.ttf C:/Users/user/coursework1.2.0/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold "Copying C:/Users/user/coursework1.2.0/111/arialbi.ttf"
+	"C:\Program Files\CMake\bin\cmake.exe" -E copy_if_different C:/Users/user/coursework1.2.0/111/arialbi.ttf C:/Users/user/coursework1.2.0/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold "Copying C:/Users/user/coursework1.2.0/111/ariali.ttf"
+	"C:\Program Files\CMake\bin\cmake.exe" -E copy_if_different C:/Users/user/coursework1.2.0/111/ariali.ttf C:/Users/user/coursework1.2.0/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold "Copying C:/Users/user/coursework1.2.0/111/ariblk.ttf"
+	"C:\Program Files\CMake\bin\cmake.exe" -E copy_if_different C:/Users/user/coursework1.2.0/111/ariblk.ttf C:/Users/user/coursework1.2.0/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold "Copying C:/Users/user/coursework1.2.0/111/background.jpg"
+	"C:\Program Files\CMake\bin\cmake.exe" -E copy_if_different C:/Users/user/coursework1.2.0/111/background.jpg C:/Users/user/coursework1.2.0/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold "Copying C:/Users/user/coursework1.2.0/111/background.png"
 	"C:\Program Files\CMake\bin\cmake.exe" -E copy_if_different C:/Users/user/coursework1.2.0/111/background.png C:/Users/user/coursework1.2.0/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold "Copying backgroundh.png"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold "Copying C:/Users/user/coursework1.2.0/111/backgroundh.png"
 	"C:\Program Files\CMake\bin\cmake.exe" -E copy_if_different C:/Users/user/coursework1.2.0/111/backgroundh.png C:/Users/user/coursework1.2.0/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold "Copying C:/Users/user/coursework1.2.0/111/libsfml-graphics-3.dll"
+	"C:\Program Files\CMake\bin\cmake.exe" -E copy_if_different C:/Users/user/coursework1.2.0/111/libsfml-graphics-3.dll C:/Users/user/coursework1.2.0/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold "Copying C:/Users/user/coursework1.2.0/111/libsfml-system-3.dll"
+	"C:\Program Files\CMake\bin\cmake.exe" -E copy_if_different C:/Users/user/coursework1.2.0/111/libsfml-system-3.dll C:/Users/user/coursework1.2.0/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold "Copying C:/Users/user/coursework1.2.0/111/libsfml-window-3.dll"
+	"C:\Program Files\CMake\bin\cmake.exe" -E copy_if_different C:/Users/user/coursework1.2.0/111/libsfml-window-3.dll C:/Users/user/coursework1.2.0/build
 
 # Rule to build all files generated by this target.
-CMakeFiles/coursework1.2.0.dir/build: coursework1.2.0.exe
+CMakeFiles/coursework1.2.0.dir/build: TagGame.exe
 .PHONY : CMakeFiles/coursework1.2.0.dir/build
 
 CMakeFiles/coursework1.2.0.dir/clean:
